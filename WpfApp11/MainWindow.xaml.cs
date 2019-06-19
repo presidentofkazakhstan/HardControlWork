@@ -29,35 +29,10 @@ namespace WpfApp11
             InitializeComponent();
         }
 
-        private void SendEmail(string toEmail, string header, string body)
-        {
-            SmtpClient client = new SmtpClient
-            {
-                Port = 587,
-                Host = "smtp.gmail.com",
-                EnableSsl = true,
-                Timeout = 10000,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new System.Net.NetworkCredential("atynyshbayev@inbox.ru", "*Step123")
-            };
-            MailMessage mailMessage = new MailMessage("atynyshbayev@inbox.ru", toEmail, header, body)
-            {
-                BodyEncoding = Encoding.UTF8,
-                DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
-            };
-
-            client.Send(mailMessage);
-        }
+      
 
 
-        private void DownloadFile(DownloadInformation information)
-        {
-            using (WebClient webClient = new WebClient())
-            {
-                webClient.DownloadFileAsync( new Uri(information.Url), information.To);
-            }
-        }
+       
 
         private void sendEmailClick(object sender, RoutedEventArgs e)
         {

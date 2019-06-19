@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="DownloadFile" Height="291.86" Width="800">
     <Grid Margin="0,0,0,2">
-  
-        <TextBlock Text="Url" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="113" Height="23">URL</TextBlock>
+
+        <TextBlock Text="Url" HorizontalAlignment="Left" Margin="10,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="113" Height="23"></TextBlock>
         <TextBox Name="urlTextBox" HorizontalAlignment="Left" Height="23" Margin="128,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="654"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" Width="113" Height="25"/>

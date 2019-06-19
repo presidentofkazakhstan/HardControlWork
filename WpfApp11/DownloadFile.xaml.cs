@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,7 +30,14 @@ namespace WpfApp11
                  To = toTextBox.Text
              };
         }
+        private void FileDownload(DownloadInformation information)
+        {
+            using (WebClient webClient = new WebClient())
+            {
+                webClient.DownloadFileAsync(new Uri(information.Url), information.To);
+            }
+        }
 
-       
+
     }
 }

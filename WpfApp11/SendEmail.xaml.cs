@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,27 @@ namespace WpfApp11
             };
         }
 
-        
+        private void EmailSend(string toEmail, string header, string body)
+        {
+            SmtpClient client = new SmtpClient
+            {
+                Port = 587,
+                Host = "smtp.gmail.com",
+                EnableSsl = true,
+                Timeout = 10000,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new System.Net.NetworkCredential("atynyshbayev@inbox.ru", "*Step123")
+            };
+            MailMessage mailMessage = new MailMessage("atynyshbayev@inbox.ru", toEmail, header, body)
+            {
+                BodyEncoding = Encoding.UTF8,
+                DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
+            };
+
+            client.Send(mailMessage);
+        }
+
+
     }
 }
