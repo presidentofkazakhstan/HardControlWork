@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="sendEmail" Content="Send Email" Click="sendEmailClick" HorizontalAlignment="Left" Margin="109,172,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button Name="dowloadFile" Content="Download File" Click="dowloadFileClick" HorizontalAlignment="Left" Margin="351,172,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Name="moveDirectory" Content="Move Directory" Click="moveDirectoryClick" HorizontalAlignment="Left" Margin="631,172,0,0" VerticalAlignment="Top" Width="90"/>
+
+
+        <DatePicker Name="datePicker" Margin="10,224,580,166"></DatePicker>
+
+
+    </Grid>
+</Window>
